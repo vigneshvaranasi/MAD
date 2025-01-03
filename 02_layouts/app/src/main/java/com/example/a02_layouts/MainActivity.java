@@ -39,4 +39,12 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,tableLayoutActivity.class);
         this.startActivity(i);
     }
+    public void onClick_btn_fl(View v){
+        Intent i = new Intent(this,frameLayout.class);
+        this.startActivity(i);
+    }
+    public void onClick_btn_rl(View v){
+        Intent i = new Intent(this,relativeLayout.class);
+        this.startActivity(i);
+    }
 }
