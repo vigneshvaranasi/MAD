@@ -47,4 +47,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,relativeLayout.class);
         this.startActivity(i);
     }
+    public void onClick_btn_tabl(View v){
+        Intent i = new Intent(this,tabLayout.class);
+        this.startActivity(i);
+    }
 }
