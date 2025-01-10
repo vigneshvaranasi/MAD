@@ -1,7 +1,11 @@
 package com.example.a03_dialogs;
 
+import static android.app.AlertDialog.*;
+
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -14,6 +18,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.security.cert.CertPathBuilderSpi;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +36,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDialog(View v){
+        AlertDialog.Builder ad= new Builder(this);
 
+        ad.setTitle("Dialog");
+        ad.setMessage("This is a Message in Dialog");
+        ad.setPositiveButton("OK", new OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this, "Positive Button is Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ad.setNegativeButton("NO", new OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this, "Negative Button is Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ad.create().show();
     }
     public void timeDialog(View v){
         Calendar cal = Calendar.getInstance();
@@ -44,11 +67,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Selected time is "+hourOfDay+" : "+minute, Toast.LENGTH_SHORT).show();
             }
         },hr,min,false);
-
         tp.show();
     }
     public void dateDialog(View v){
-
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
@@ -60,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Date: "+dayOfMonth+"-"+month+1+"-"+year, Toast.LENGTH_SHORT).show();
             }
         },year,month,day);
-
         dp.show();
-
     }
 }
