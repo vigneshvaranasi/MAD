@@ -1,6 +1,9 @@
 package com.example.a05_intent;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +24,24 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void onClickSecondActivity(View v){
+        Intent i = new Intent(this, SecondActivity.class);
+        this.startActivity(i);
+    }
+
+    public void openURL(View v) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
+        startActivity(browserIntent);
+    }
+
+    public void sendMail(View v) {
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setType("message/rfc822");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"example@example.com"});
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Hello");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "This is a test email.");
+        startActivity(Intent.createChooser(emailIntent, "Send Email"));
+    }
+
 }
