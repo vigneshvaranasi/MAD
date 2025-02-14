@@ -35,10 +35,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(browserIntent);
     }
 
-    public void sendMail(View v) {
+    public void sendMailDirect(View v) {
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse("varanasivsv@gmail.com"));
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Hello");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "This is a test email");
+        startActivity(emailIntent);
+    }
+
+    public void sendMailDialog(View v) {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setType("message/rfc822");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"example@example.com"});
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"varanasivsv@gmail.com"});
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Hello");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "This is a test email.");
         startActivity(Intent.createChooser(emailIntent, "Send Email"));
