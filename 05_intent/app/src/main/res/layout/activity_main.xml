@@ -15,8 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="146dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="156dp"
         android:onClick="onClickSecondActivity"
         android:text="Open Second Activity" />
 
@@ -26,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="241dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="219dp"
         android:onClick="sendMailDirect"
         android:text="Send Mail Direct" />
 
@@ -37,8 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="407dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="158dp"
         android:onClick="openURL"
         android:text="Open URL" />
 
@@ -48,10 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="312dp"
-        android:layout_marginBottom="369dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="286dp"
         android:onClick="sendMailDialog"
         android:text="Send Mail Dialog" />
 </RelativeLayout>

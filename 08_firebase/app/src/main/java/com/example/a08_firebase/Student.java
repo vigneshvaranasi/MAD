@@ -9,6 +9,8 @@ public class Student {
         this.avg = avg;
     }
 
+    public Student() {
+    }
     public String getRoll() {
         return roll;
     }
