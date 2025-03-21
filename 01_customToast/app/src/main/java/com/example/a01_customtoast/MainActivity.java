@@ -29,35 +29,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // override onStart
-//    protected void onStart(){
-//        Toast.makeText(this, "Hello, from onStart", Toast.LENGTH_LONG).show();
-//        super.onStart();
-//    }
-//
-//    // override onResume
-//    protected void onResume(){
-//        Toast.makeText(this, "Hello, from onResume", Toast.LENGTH_LONG).show();
-//        super.onResume();
-//    }
-//
-//    // override onPause
-//    protected void onPause(){
-//        Toast.makeText(this, "Hello, from onPause", Toast.LENGTH_LONG).show();
-//        super.onPause();
-//    }
-//
-//    // override onRestart
-//    protected void onRestart(){
-//        Toast.makeText(this, "Hello, from onRestart", Toast.LENGTH_LONG).show();
-//        super.onRestart();
-//    }
-//
-//    // override onStop
-//    protected void onStop(){
-//        Toast.makeText(this, "Hello, from onStop", Toast.LENGTH_LONG).show();
-//        super.onStop();
-//    }
-//
+    protected void onStart(){
+        Toast.makeText(this, "Hello, from onStart", Toast.LENGTH_LONG).show();
+        super.onStart();
+    }
+
+    // override onResume
+    protected void onResume(){
+        Toast.makeText(this, "Hello, from onResume", Toast.LENGTH_LONG).show();
+        super.onResume();
+    }
+
+    // override onPause
+    protected void onPause(){
+        Toast.makeText(this, "Hello, from onPause", Toast.LENGTH_LONG).show();
+        super.onPause();
+    }
+
+    // override onRestart
+    protected void onRestart(){
+        Toast.makeText(this, "Hello, from onRestart", Toast.LENGTH_LONG).show();
+        super.onRestart();
+    }
+
+    // override onStop
+    protected void onStop(){
+        Toast.makeText(this, "Hello, from onStop", Toast.LENGTH_LONG).show();
+        super.onStop();
+    }
+
     public void showToast(View x) {
         Toast.makeText(this, "Hello, Welcome", Toast.LENGTH_LONG).show();
     }
