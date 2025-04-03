@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         DatePickerDialog dp = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                Toast.makeText(MainActivity.this, "Date: "+dayOfMonth+"-"+month+1+"-"+year, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Date: "+dayOfMonth+"-"+(month+1)+"-"+year, Toast.LENGTH_SHORT).show();
             }
         },year,month,day);
         dp.show();

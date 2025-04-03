@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendMailDirect(View v) {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-        emailIntent.setData(Uri.parse("varanasivsv@gmail.com"));
+        emailIntent.setData(Uri.parse("mailto:varanasivsv@gmail.com"));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Hello");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "This is a test email");
         startActivity(emailIntent);

@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     FootballFragment ff;
     HockeyFragment hf;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
