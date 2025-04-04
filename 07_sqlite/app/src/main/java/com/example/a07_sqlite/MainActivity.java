@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         try{
             roll = Integer.parseInt(edttxt_roll.getText().toString());
             sgdb.deleteStudent(roll);
-            Log.d("Good","delete: Successful");
             Toast.makeText(this,"Delete Successful",Toast.LENGTH_LONG).show();
         }
         catch(Exception e){
@@ -59,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             roll = Integer.parseInt(edttxt_roll.getText().toString());
             String c = sgdb.getStudent(roll);
             Toast.makeText(this,c,Toast.LENGTH_LONG).show();
-            Log.d("Good","Get Student: Successful" + c);
         }
         catch(Exception e){
             Log.d("Problem","Get: Unsuccessful"+e.getMessage());
@@ -74,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
             s = new Student(roll, sname, avg, grade);
             sgdb.updateStudent(s);
             Toast.makeText(this,"Updation Successful",Toast.LENGTH_LONG).show();
-            Log.d("Good","Update Student: Successful");
         }
         catch(Exception e){
             Log.d("Problem","Update: Unsuccessful"+e.getMessage());
